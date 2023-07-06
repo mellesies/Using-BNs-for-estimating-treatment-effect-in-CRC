@@ -1,0 +1,1594 @@
+Thu Mar 30 08:55:05 2023
+
+
+Moral links:
+
+    Marrying pN and pT
+    Marrying age and pN
+    Marrying adj_therapy and recfree_02y
+    Marrying ASA and age
+    Marrying ASA and pN
+
+
+Triangulating prime component with 2 members:
+    sex, location
+This component is a clique of cost 6
+
+Triangulating prime component with 2 members:
+    location, grade
+This component is a clique of cost 15
+
+Triangulating prime component with 3 members:
+    recfree_02y, surv_05y, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    pN, grade
+This component is a clique of cost 10
+
+Triangulating prime component with 3 members:
+    recfree_02y, pT, pN
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    recfree_02y, pN, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    comorbidities, ASA
+This component is a clique of cost 20
+
+Triangulating prime component with 4 members:
+    pN, age, adj_therapy, ASA
+This component is a clique of cost 60
+
+
+Total cost of triangulation for all prime components is 143
+
+
+Elimination sequence:
+
+    comorbidities
+    surv_05y
+    pT
+    recfree_02y
+    age
+    ASA
+    adj_therapy
+    pN
+    grade
+    sex
+    location
+
+
+Cliques:
+
+Clique 8, 2 members, table size = 6:
+    location, sex
+
+Clique 7, 2 members, table size = 15:
+    location, grade
+
+Clique 6, 2 members, table size = 10:
+    grade, pN
+
+Clique 5, 4 members, table size = 60:
+    pN, adj_therapy, ASA, age
+
+Clique 4, 3 members, table size = 8:
+    pN, adj_therapy, recfree_02y
+
+Clique 3, 3 members, table size = 16:
+    pN, recfree_02y, pT
+
+Clique 2, 3 members, table size = 8:
+    adj_therapy, recfree_02y, surv_05y
+
+Clique 1, 2 members, table size = 20:
+    ASA, comorbidities
+
+Total clique table size: 143
+
+
+The junction forest:
+
+Creating junction tree with clique 8 as root ...
+
+Cliques 7 and 8 linked, separator has 1 member and table size = 3:
+    location
+
+Cliques 6 and 7 linked, separator has 1 member and table size = 5:
+    grade
+
+Cliques 5 and 6 linked, separator has 1 member and table size = 2:
+    pN
+
+Cliques 4 and 5 linked, separator has 2 members and table size = 4:
+    pN, adj_therapy
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 4:
+    pN, recfree_02y
+
+Cliques 2 and 4 linked, separator has 2 members and table size = 4:
+    adj_therapy, recfree_02y
+
+Cliques 1 and 5 linked, separator has 1 member and table size = 5:
+    ASA
+
+
+Assignment of potentials to cliques:
+
+    Node recfree_02y assigned to clique 3
+    Node surv_05y assigned to clique 2
+    Node sex assigned to clique 8
+    Node pT assigned to clique 3
+    Node pN assigned to clique 6
+    Node location assigned to clique 8
+    Node grade assigned to clique 7
+    Node comorbidities assigned to clique 1
+    Node age assigned to clique 5
+    Node adj_therapy assigned to clique 5
+    Node ASA assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    recfree_02y:
+	false      0.5
+	true       0.5
+
+    surv_05y:
+	false      0.5
+	true       0.5
+
+    sex:
+	female     0.5
+	male       0.5
+
+    pT:
+	T3         0.25
+	T2         0.25
+	T1         0.25
+	T4         0.25
+
+    pN:
+	N2         0.5
+	N1         0.5
+
+    location:
+	proximal   0.333333
+	distal     0.333333
+	other/unknown 0.333333
+
+    grade:
+	g3         0.2
+	g2         0.2
+	unknown    0.2
+	g1         0.2
+	g4         0.2
+
+    comorbidities:
+	1          0.25
+	2+         0.25
+	none       0.25
+	unknown    0.25
+
+    age:
+	80+        0.333333
+	75 - 79    0.333333
+	70 - 74    0.333333
+
+    adj_therapy:
+	No         0.5
+	Yes        0.5
+
+    ASA:
+	2          0.2
+	3          0.2
+	unknown    0.2
+	1          0.2
+	4          0.2
+Thu Mar 30 08:56:27 2023
+
+
+Moral links:
+
+    Marrying pN and pT
+    Marrying age and pN
+    Marrying adj_therapy and recfree_02y
+    Marrying ASA and age
+    Marrying ASA and pN
+
+
+Triangulating prime component with 2 members:
+    sex, location
+This component is a clique of cost 6
+
+Triangulating prime component with 2 members:
+    location, grade
+This component is a clique of cost 15
+
+Triangulating prime component with 3 members:
+    recfree_02y, surv_05y, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    pN, grade
+This component is a clique of cost 10
+
+Triangulating prime component with 3 members:
+    recfree_02y, pT, pN
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    recfree_02y, pN, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    comorbidities, ASA
+This component is a clique of cost 20
+
+Triangulating prime component with 4 members:
+    pN, age, adj_therapy, ASA
+This component is a clique of cost 60
+
+
+Total cost of triangulation for all prime components is 143
+
+
+Elimination sequence:
+
+    comorbidities
+    surv_05y
+    pT
+    recfree_02y
+    age
+    ASA
+    adj_therapy
+    pN
+    grade
+    sex
+    location
+
+
+Cliques:
+
+Clique 8, 2 members, table size = 6:
+    location, sex
+
+Clique 7, 2 members, table size = 15:
+    location, grade
+
+Clique 6, 2 members, table size = 10:
+    grade, pN
+
+Clique 5, 4 members, table size = 60:
+    pN, adj_therapy, ASA, age
+
+Clique 4, 3 members, table size = 8:
+    pN, adj_therapy, recfree_02y
+
+Clique 3, 3 members, table size = 16:
+    pN, recfree_02y, pT
+
+Clique 2, 3 members, table size = 8:
+    adj_therapy, recfree_02y, surv_05y
+
+Clique 1, 2 members, table size = 20:
+    ASA, comorbidities
+
+Total clique table size: 143
+
+
+The junction forest:
+
+Creating junction tree with clique 8 as root ...
+
+Cliques 7 and 8 linked, separator has 1 member and table size = 3:
+    location
+
+Cliques 6 and 7 linked, separator has 1 member and table size = 5:
+    grade
+
+Cliques 5 and 6 linked, separator has 1 member and table size = 2:
+    pN
+
+Cliques 4 and 5 linked, separator has 2 members and table size = 4:
+    pN, adj_therapy
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 4:
+    pN, recfree_02y
+
+Cliques 2 and 4 linked, separator has 2 members and table size = 4:
+    adj_therapy, recfree_02y
+
+Cliques 1 and 5 linked, separator has 1 member and table size = 5:
+    ASA
+
+
+Assignment of potentials to cliques:
+
+    Node recfree_02y assigned to clique 3
+    Node surv_05y assigned to clique 2
+    Node sex assigned to clique 8
+    Node pT assigned to clique 3
+    Node pN assigned to clique 6
+    Node location assigned to clique 8
+    Node grade assigned to clique 7
+    Node comorbidities assigned to clique 1
+    Node age assigned to clique 5
+    Node adj_therapy assigned to clique 5
+    Node ASA assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    recfree_02y:
+	false      0.5
+	true       0.5
+
+    surv_05y:
+	false      0.5
+	true       0.5
+
+    sex:
+	female     0.5
+	male       0.5
+
+    pT:
+	T3         0.25
+	T2         0.25
+	T1         0.25
+	T4         0.25
+
+    pN:
+	N2         0.5
+	N1         0.5
+
+    location:
+	proximal   0.333333
+	distal     0.333333
+	other/unknown 0.333333
+
+    grade:
+	g3         0.2
+	g2         0.2
+	unknown    0.2
+	g1         0.2
+	g4         0.2
+
+    comorbidities:
+	1          0.25
+	2+         0.25
+	none       0.25
+	unknown    0.25
+
+    age:
+	80+        0.333333
+	75 - 79    0.333333
+	70 - 74    0.333333
+
+    adj_therapy:
+	No         0.5
+	Yes        0.5
+
+    ASA:
+	2          0.2
+	3          0.2
+	unknown    0.2
+	1          0.2
+	4          0.2
+Thu Mar 30 08:56:42 2023
+
+
+Moral links:
+
+    Marrying pN and pT
+    Marrying age and pN
+    Marrying adj_therapy and recfree_02y
+    Marrying ASA and age
+    Marrying ASA and pN
+
+
+Triangulating prime component with 2 members:
+    sex, location
+This component is a clique of cost 6
+
+Triangulating prime component with 2 members:
+    location, grade
+This component is a clique of cost 15
+
+Triangulating prime component with 3 members:
+    recfree_02y, surv_05y, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    pN, grade
+This component is a clique of cost 10
+
+Triangulating prime component with 3 members:
+    recfree_02y, pT, pN
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    recfree_02y, pN, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    comorbidities, ASA
+This component is a clique of cost 20
+
+Triangulating prime component with 4 members:
+    pN, age, adj_therapy, ASA
+This component is a clique of cost 60
+
+
+Total cost of triangulation for all prime components is 143
+
+
+Elimination sequence:
+
+    comorbidities
+    surv_05y
+    pT
+    recfree_02y
+    age
+    ASA
+    adj_therapy
+    pN
+    grade
+    sex
+    location
+
+
+Cliques:
+
+Clique 8, 2 members, table size = 6:
+    location, sex
+
+Clique 7, 2 members, table size = 15:
+    location, grade
+
+Clique 6, 2 members, table size = 10:
+    grade, pN
+
+Clique 5, 4 members, table size = 60:
+    pN, adj_therapy, ASA, age
+
+Clique 4, 3 members, table size = 8:
+    pN, adj_therapy, recfree_02y
+
+Clique 3, 3 members, table size = 16:
+    pN, recfree_02y, pT
+
+Clique 2, 3 members, table size = 8:
+    adj_therapy, recfree_02y, surv_05y
+
+Clique 1, 2 members, table size = 20:
+    ASA, comorbidities
+
+Total clique table size: 143
+
+
+The junction forest:
+
+Creating junction tree with clique 8 as root ...
+
+Cliques 7 and 8 linked, separator has 1 member and table size = 3:
+    location
+
+Cliques 6 and 7 linked, separator has 1 member and table size = 5:
+    grade
+
+Cliques 5 and 6 linked, separator has 1 member and table size = 2:
+    pN
+
+Cliques 4 and 5 linked, separator has 2 members and table size = 4:
+    pN, adj_therapy
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 4:
+    pN, recfree_02y
+
+Cliques 2 and 4 linked, separator has 2 members and table size = 4:
+    adj_therapy, recfree_02y
+
+Cliques 1 and 5 linked, separator has 1 member and table size = 5:
+    ASA
+
+
+Assignment of potentials to cliques:
+
+    Node recfree_02y assigned to clique 3
+    Node surv_05y assigned to clique 2
+    Node sex assigned to clique 8
+    Node pT assigned to clique 3
+    Node pN assigned to clique 6
+    Node location assigned to clique 8
+    Node grade assigned to clique 7
+    Node comorbidities assigned to clique 1
+    Node age assigned to clique 5
+    Node adj_therapy assigned to clique 5
+    Node ASA assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    recfree_02y:
+	false      0.5
+	true       0.5
+
+    surv_05y:
+	false      0.5
+	true       0.5
+
+    sex:
+	female     0.5
+	male       0.5
+
+    pT:
+	T3         0.25
+	T2         0.25
+	T1         0.25
+	T4         0.25
+
+    pN:
+	N2         0.5
+	N1         0.5
+
+    location:
+	proximal   0.333333
+	distal     0.333333
+	other/unknown 0.333333
+
+    grade:
+	g3         0.2
+	g2         0.2
+	unknown    0.2
+	g1         0.2
+	g4         0.2
+
+    comorbidities:
+	1          0.25
+	2+         0.25
+	none       0.25
+	unknown    0.25
+
+    age:
+	80+        0.333333
+	75 - 79    0.333333
+	70 - 74    0.333333
+
+    adj_therapy:
+	No         0.5
+	Yes        0.5
+
+    ASA:
+	2          0.2
+	3          0.2
+	unknown    0.2
+	1          0.2
+	4          0.2
+
+
+EM learning with 982 cases:
+
+    Log-likelihood for iteration 1: -11226.3
+    Log-likelihood for iteration 2: -8383.66
+    Log-likelihood for iteration 3: -8354.08
+    Log-likelihood for iteration 4: -8349.24
+    Log-likelihood for iteration 5: -8348.55
+
+EM learning - final results:
+
+    Log-likelihood: -8348.46
+    AIC: -8436.46
+    BIC: -8651.61
+Thu Mar 30 08:56:50 2023
+
+
+Moral links:
+
+    Marrying pN and pT
+    Marrying age and pN
+    Marrying adj_therapy and recfree_02y
+    Marrying ASA and age
+    Marrying ASA and pN
+
+
+Triangulating prime component with 2 members:
+    sex, location
+This component is a clique of cost 6
+
+Triangulating prime component with 2 members:
+    location, grade
+This component is a clique of cost 15
+
+Triangulating prime component with 3 members:
+    recfree_02y, surv_05y, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    pN, grade
+This component is a clique of cost 10
+
+Triangulating prime component with 3 members:
+    recfree_02y, pT, pN
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    recfree_02y, pN, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    comorbidities, ASA
+This component is a clique of cost 20
+
+Triangulating prime component with 4 members:
+    pN, age, adj_therapy, ASA
+This component is a clique of cost 60
+
+
+Total cost of triangulation for all prime components is 143
+
+
+Elimination sequence:
+
+    comorbidities
+    surv_05y
+    pT
+    recfree_02y
+    age
+    ASA
+    adj_therapy
+    pN
+    grade
+    sex
+    location
+
+
+Cliques:
+
+Clique 8, 2 members, table size = 6:
+    location, sex
+
+Clique 7, 2 members, table size = 15:
+    location, grade
+
+Clique 6, 2 members, table size = 10:
+    grade, pN
+
+Clique 5, 4 members, table size = 60:
+    pN, adj_therapy, ASA, age
+
+Clique 4, 3 members, table size = 8:
+    pN, adj_therapy, recfree_02y
+
+Clique 3, 3 members, table size = 16:
+    pN, recfree_02y, pT
+
+Clique 2, 3 members, table size = 8:
+    adj_therapy, recfree_02y, surv_05y
+
+Clique 1, 2 members, table size = 20:
+    ASA, comorbidities
+
+Total clique table size: 143
+
+
+The junction forest:
+
+Creating junction tree with clique 8 as root ...
+
+Cliques 7 and 8 linked, separator has 1 member and table size = 3:
+    location
+
+Cliques 6 and 7 linked, separator has 1 member and table size = 5:
+    grade
+
+Cliques 5 and 6 linked, separator has 1 member and table size = 2:
+    pN
+
+Cliques 4 and 5 linked, separator has 2 members and table size = 4:
+    pN, adj_therapy
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 4:
+    pN, recfree_02y
+
+Cliques 2 and 4 linked, separator has 2 members and table size = 4:
+    adj_therapy, recfree_02y
+
+Cliques 1 and 5 linked, separator has 1 member and table size = 5:
+    ASA
+
+
+Assignment of potentials to cliques:
+
+    Node recfree_02y assigned to clique 3
+    Node surv_05y assigned to clique 2
+    Node sex assigned to clique 8
+    Node pT assigned to clique 3
+    Node pN assigned to clique 6
+    Node location assigned to clique 8
+    Node grade assigned to clique 7
+    Node comorbidities assigned to clique 1
+    Node age assigned to clique 5
+    Node adj_therapy assigned to clique 5
+    Node ASA assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for adj_therapy sum to different values:
+    min = 1
+    max = 2
+
+
+Beliefs for chance nodes:
+
+    recfree_02y:
+	false      0.396463
+	true       0.603537
+
+    surv_05y:
+	false      0.496118
+	true       0.503882
+
+    sex:
+	female     0.52444
+	male       0.47556
+
+    pT:
+	T3         0.715886
+	T2         0.0885947
+	T1         0.0203666
+	T4         0.175153
+
+    pN:
+	N2         0.278004
+	N1         0.721996
+
+    location:
+	proximal   0.600815
+	distal     0.386965
+	other/unknown 0.01222
+
+    grade:
+	g3         0.248473
+	g2         0.635438
+	unknown    0.0651731
+	g1         0.0488798
+	g4         0.00203666
+
+    comorbidities:
+	1          0.239308
+	2+         0.532587
+	none       0.198574
+	unknown    0.0295316
+
+    age:
+	80+        0.360489
+	75 - 79    0.334012
+	70 - 74    0.305499
+
+    adj_therapy:
+	No         0.645783
+	Yes        0.354217
+
+    ASA:
+	2          0.437882
+	3          0.271894
+	unknown    0.231161
+	1          0.0539715
+	4          0.00509165
+Thu Mar 30 08:58:02 2023
+
+
+Moral links:
+
+    Marrying pN and pT
+    Marrying age and pN
+    Marrying adj_therapy and recfree_02y
+    Marrying ASA and age
+    Marrying ASA and pN
+
+
+Triangulating prime component with 2 members:
+    sex, location
+This component is a clique of cost 6
+
+Triangulating prime component with 2 members:
+    location, grade
+This component is a clique of cost 15
+
+Triangulating prime component with 3 members:
+    recfree_02y, surv_05y, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    pN, grade
+This component is a clique of cost 10
+
+Triangulating prime component with 3 members:
+    recfree_02y, pT, pN
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    recfree_02y, pN, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    comorbidities, ASA
+This component is a clique of cost 20
+
+Triangulating prime component with 4 members:
+    pN, age, adj_therapy, ASA
+This component is a clique of cost 60
+
+
+Total cost of triangulation for all prime components is 143
+
+
+Elimination sequence:
+
+    comorbidities
+    surv_05y
+    pT
+    recfree_02y
+    age
+    ASA
+    adj_therapy
+    pN
+    grade
+    sex
+    location
+
+
+Cliques:
+
+Clique 8, 2 members, table size = 6:
+    location, sex
+
+Clique 7, 2 members, table size = 15:
+    location, grade
+
+Clique 6, 2 members, table size = 10:
+    grade, pN
+
+Clique 5, 4 members, table size = 60:
+    pN, adj_therapy, ASA, age
+
+Clique 4, 3 members, table size = 8:
+    pN, adj_therapy, recfree_02y
+
+Clique 3, 3 members, table size = 16:
+    pN, recfree_02y, pT
+
+Clique 2, 3 members, table size = 8:
+    adj_therapy, recfree_02y, surv_05y
+
+Clique 1, 2 members, table size = 20:
+    ASA, comorbidities
+
+Total clique table size: 143
+
+
+The junction forest:
+
+Creating junction tree with clique 8 as root ...
+
+Cliques 7 and 8 linked, separator has 1 member and table size = 3:
+    location
+
+Cliques 6 and 7 linked, separator has 1 member and table size = 5:
+    grade
+
+Cliques 5 and 6 linked, separator has 1 member and table size = 2:
+    pN
+
+Cliques 4 and 5 linked, separator has 2 members and table size = 4:
+    pN, adj_therapy
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 4:
+    pN, recfree_02y
+
+Cliques 2 and 4 linked, separator has 2 members and table size = 4:
+    adj_therapy, recfree_02y
+
+Cliques 1 and 5 linked, separator has 1 member and table size = 5:
+    ASA
+
+
+Assignment of potentials to cliques:
+
+    Node recfree_02y assigned to clique 3
+    Node surv_05y assigned to clique 2
+    Node sex assigned to clique 8
+    Node pT assigned to clique 3
+    Node pN assigned to clique 6
+    Node location assigned to clique 8
+    Node grade assigned to clique 7
+    Node comorbidities assigned to clique 1
+    Node age assigned to clique 5
+    Node adj_therapy assigned to clique 5
+    Node ASA assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for adj_therapy sum to different values:
+    min = 1
+    max = 2
+
+
+Beliefs for chance nodes:
+
+    recfree_02y:
+	false      0.396463
+	true       0.603537
+
+    surv_05y:
+	false      0.496118
+	true       0.503882
+
+    sex:
+	female     0.52444
+	male       0.47556
+
+    pT:
+	T1         0.715886
+	T2         0.0885947
+	T3         0.0203666
+	T4         0.175153
+
+    pN:
+	N1         0.278004
+	N2         0.721996
+
+    location:
+	proximal   0.600815
+	distal     0.386965
+	other/unknown 0.01222
+
+    grade:
+	g1         0.248473
+	g2         0.635438
+	g3         0.0651731
+	g4         0.0488798
+	unknown    0.00203666
+
+    comorbidities:
+	1          0.239308
+	2+         0.532587
+	none       0.198574
+	unknown    0.0295316
+
+    age:
+	70 - 74    0.360489
+	75 - 79    0.334012
+	80+        0.305499
+
+    adj_therapy:
+	No         0.645783
+	Yes        0.354217
+
+    ASA:
+	1          0.437882
+	2          0.271894
+	3          0.231161
+	4          0.0539715
+	unknown    0.00509165
+
+
+EM learning with 982 cases:
+
+
+
+EM learning with 982 cases:
+
+Thu Mar 30 08:58:14 2023
+
+
+Moral links:
+
+    Marrying pN and pT
+    Marrying age and pN
+    Marrying adj_therapy and recfree_02y
+    Marrying ASA and age
+    Marrying ASA and pN
+
+
+Triangulating prime component with 2 members:
+    sex, location
+This component is a clique of cost 6
+
+Triangulating prime component with 2 members:
+    location, grade
+This component is a clique of cost 15
+
+Triangulating prime component with 3 members:
+    recfree_02y, surv_05y, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    pN, grade
+This component is a clique of cost 10
+
+Triangulating prime component with 3 members:
+    recfree_02y, pT, pN
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    recfree_02y, pN, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    comorbidities, ASA
+This component is a clique of cost 20
+
+Triangulating prime component with 4 members:
+    pN, age, adj_therapy, ASA
+This component is a clique of cost 60
+
+
+Total cost of triangulation for all prime components is 143
+
+
+Elimination sequence:
+
+    comorbidities
+    surv_05y
+    pT
+    recfree_02y
+    age
+    ASA
+    adj_therapy
+    pN
+    grade
+    sex
+    location
+
+
+Cliques:
+
+Clique 8, 2 members, table size = 6:
+    location, sex
+
+Clique 7, 2 members, table size = 15:
+    location, grade
+
+Clique 6, 2 members, table size = 10:
+    grade, pN
+
+Clique 5, 4 members, table size = 60:
+    pN, adj_therapy, ASA, age
+
+Clique 4, 3 members, table size = 8:
+    pN, adj_therapy, recfree_02y
+
+Clique 3, 3 members, table size = 16:
+    pN, recfree_02y, pT
+
+Clique 2, 3 members, table size = 8:
+    adj_therapy, recfree_02y, surv_05y
+
+Clique 1, 2 members, table size = 20:
+    ASA, comorbidities
+
+Total clique table size: 143
+
+
+The junction forest:
+
+Creating junction tree with clique 8 as root ...
+
+Cliques 7 and 8 linked, separator has 1 member and table size = 3:
+    location
+
+Cliques 6 and 7 linked, separator has 1 member and table size = 5:
+    grade
+
+Cliques 5 and 6 linked, separator has 1 member and table size = 2:
+    pN
+
+Cliques 4 and 5 linked, separator has 2 members and table size = 4:
+    pN, adj_therapy
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 4:
+    pN, recfree_02y
+
+Cliques 2 and 4 linked, separator has 2 members and table size = 4:
+    adj_therapy, recfree_02y
+
+Cliques 1 and 5 linked, separator has 1 member and table size = 5:
+    ASA
+
+
+Assignment of potentials to cliques:
+
+    Node recfree_02y assigned to clique 3
+    Node surv_05y assigned to clique 2
+    Node sex assigned to clique 8
+    Node pT assigned to clique 3
+    Node pN assigned to clique 6
+    Node location assigned to clique 8
+    Node grade assigned to clique 7
+    Node comorbidities assigned to clique 1
+    Node age assigned to clique 5
+    Node adj_therapy assigned to clique 5
+    Node ASA assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    recfree_02y:
+	false      0.5
+	true       0.5
+
+    surv_05y:
+	false      0.5
+	true       0.5
+
+    sex:
+	female     0.5
+	male       0.5
+
+    pT:
+	T1         0.25
+	T2         0.25
+	T3         0.25
+	T4         0.25
+
+    pN:
+	N1         0.5
+	N2         0.5
+
+    location:
+	proximal   0.333333
+	distal     0.333333
+	other/unknown 0.333333
+
+    grade:
+	g1         0.2
+	g2         0.2
+	g3         0.2
+	g4         0.2
+	unknown    0.2
+
+    comorbidities:
+	1          0.25
+	2+         0.25
+	none       0.25
+	unknown    0.25
+
+    age:
+	70 - 74    0.333333
+	75 - 79    0.333333
+	80+        0.333333
+
+    adj_therapy:
+	No         0.5
+	Yes        0.5
+
+    ASA:
+	1          0.2
+	2          0.2
+	3          0.2
+	4          0.2
+	unknown    0.2
+Thu Mar 30 08:59:27 2023
+
+
+Moral links:
+
+    Marrying pN and pT
+    Marrying age and pN
+    Marrying adj_therapy and recfree_02y
+    Marrying ASA and age
+    Marrying ASA and pN
+
+
+Triangulating prime component with 2 members:
+    sex, location
+This component is a clique of cost 6
+
+Triangulating prime component with 2 members:
+    location, grade
+This component is a clique of cost 15
+
+Triangulating prime component with 3 members:
+    recfree_02y, surv_05y, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    pN, grade
+This component is a clique of cost 10
+
+Triangulating prime component with 3 members:
+    recfree_02y, pT, pN
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    recfree_02y, pN, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    comorbidities, ASA
+This component is a clique of cost 20
+
+Triangulating prime component with 4 members:
+    pN, age, adj_therapy, ASA
+This component is a clique of cost 60
+
+
+Total cost of triangulation for all prime components is 143
+
+
+Elimination sequence:
+
+    comorbidities
+    surv_05y
+    pT
+    recfree_02y
+    age
+    ASA
+    adj_therapy
+    pN
+    grade
+    sex
+    location
+
+
+Cliques:
+
+Clique 8, 2 members, table size = 6:
+    location, sex
+
+Clique 7, 2 members, table size = 15:
+    location, grade
+
+Clique 6, 2 members, table size = 10:
+    grade, pN
+
+Clique 5, 4 members, table size = 60:
+    pN, adj_therapy, ASA, age
+
+Clique 4, 3 members, table size = 8:
+    pN, adj_therapy, recfree_02y
+
+Clique 3, 3 members, table size = 16:
+    pN, recfree_02y, pT
+
+Clique 2, 3 members, table size = 8:
+    adj_therapy, recfree_02y, surv_05y
+
+Clique 1, 2 members, table size = 20:
+    ASA, comorbidities
+
+Total clique table size: 143
+
+
+The junction forest:
+
+Creating junction tree with clique 8 as root ...
+
+Cliques 7 and 8 linked, separator has 1 member and table size = 3:
+    location
+
+Cliques 6 and 7 linked, separator has 1 member and table size = 5:
+    grade
+
+Cliques 5 and 6 linked, separator has 1 member and table size = 2:
+    pN
+
+Cliques 4 and 5 linked, separator has 2 members and table size = 4:
+    pN, adj_therapy
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 4:
+    pN, recfree_02y
+
+Cliques 2 and 4 linked, separator has 2 members and table size = 4:
+    adj_therapy, recfree_02y
+
+Cliques 1 and 5 linked, separator has 1 member and table size = 5:
+    ASA
+
+
+Assignment of potentials to cliques:
+
+    Node recfree_02y assigned to clique 3
+    Node surv_05y assigned to clique 2
+    Node sex assigned to clique 8
+    Node pT assigned to clique 3
+    Node pN assigned to clique 6
+    Node location assigned to clique 8
+    Node grade assigned to clique 7
+    Node comorbidities assigned to clique 1
+    Node age assigned to clique 5
+    Node adj_therapy assigned to clique 5
+    Node ASA assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+
+Beliefs for chance nodes:
+
+    recfree_02y:
+	false      0.5
+	true       0.5
+
+    surv_05y:
+	false      0.5
+	true       0.5
+
+    sex:
+	female     0.5
+	male       0.5
+
+    pT:
+	T1         0.25
+	T2         0.25
+	T3         0.25
+	T4         0.25
+
+    pN:
+	N1         0.5
+	N2         0.5
+
+    location:
+	proximal   0.333333
+	distal     0.333333
+	other/unknown 0.333333
+
+    grade:
+	g1         0.2
+	g2         0.2
+	g3         0.2
+	g4         0.2
+	unknown    0.2
+
+    comorbidities:
+	1          0.25
+	2+         0.25
+	none       0.25
+	unknown    0.25
+
+    age:
+	70 - 74    0.333333
+	75 - 79    0.333333
+	80+        0.333333
+
+    adj_therapy:
+	No         0.5
+	Yes        0.5
+
+    ASA:
+	1          0.2
+	2          0.2
+	3          0.2
+	4          0.2
+	unknown    0.2
+
+
+EM learning with 982 cases:
+
+    Log-likelihood for iteration 1: -11226.3
+    Log-likelihood for iteration 2: -8383.66
+    Log-likelihood for iteration 3: -8354.08
+    Log-likelihood for iteration 4: -8349.24
+    Log-likelihood for iteration 5: -8348.55
+
+EM learning - final results:
+
+    Log-likelihood: -8348.46
+    AIC: -8436.46
+    BIC: -8651.61
+Thu Mar 30 08:59:32 2023
+
+
+Moral links:
+
+    Marrying pN and pT
+    Marrying age and pN
+    Marrying adj_therapy and recfree_02y
+    Marrying ASA and age
+    Marrying ASA and pN
+
+
+Triangulating prime component with 2 members:
+    sex, location
+This component is a clique of cost 6
+
+Triangulating prime component with 2 members:
+    location, grade
+This component is a clique of cost 15
+
+Triangulating prime component with 3 members:
+    recfree_02y, surv_05y, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    pN, grade
+This component is a clique of cost 10
+
+Triangulating prime component with 3 members:
+    recfree_02y, pT, pN
+This component is a clique of cost 16
+
+Triangulating prime component with 3 members:
+    recfree_02y, pN, adj_therapy
+This component is a clique of cost 8
+
+Triangulating prime component with 2 members:
+    comorbidities, ASA
+This component is a clique of cost 20
+
+Triangulating prime component with 4 members:
+    pN, age, adj_therapy, ASA
+This component is a clique of cost 60
+
+
+Total cost of triangulation for all prime components is 143
+
+
+Elimination sequence:
+
+    comorbidities
+    surv_05y
+    pT
+    recfree_02y
+    age
+    ASA
+    adj_therapy
+    pN
+    grade
+    sex
+    location
+
+
+Cliques:
+
+Clique 8, 2 members, table size = 6:
+    location, sex
+
+Clique 7, 2 members, table size = 15:
+    location, grade
+
+Clique 6, 2 members, table size = 10:
+    grade, pN
+
+Clique 5, 4 members, table size = 60:
+    pN, adj_therapy, ASA, age
+
+Clique 4, 3 members, table size = 8:
+    pN, adj_therapy, recfree_02y
+
+Clique 3, 3 members, table size = 16:
+    pN, recfree_02y, pT
+
+Clique 2, 3 members, table size = 8:
+    adj_therapy, recfree_02y, surv_05y
+
+Clique 1, 2 members, table size = 20:
+    ASA, comorbidities
+
+Total clique table size: 143
+
+
+The junction forest:
+
+Creating junction tree with clique 8 as root ...
+
+Cliques 7 and 8 linked, separator has 1 member and table size = 3:
+    location
+
+Cliques 6 and 7 linked, separator has 1 member and table size = 5:
+    grade
+
+Cliques 5 and 6 linked, separator has 1 member and table size = 2:
+    pN
+
+Cliques 4 and 5 linked, separator has 2 members and table size = 4:
+    pN, adj_therapy
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 4:
+    pN, recfree_02y
+
+Cliques 2 and 4 linked, separator has 2 members and table size = 4:
+    adj_therapy, recfree_02y
+
+Cliques 1 and 5 linked, separator has 1 member and table size = 5:
+    ASA
+
+
+Assignment of potentials to cliques:
+
+    Node recfree_02y assigned to clique 3
+    Node surv_05y assigned to clique 2
+    Node sex assigned to clique 8
+    Node pT assigned to clique 3
+    Node pN assigned to clique 6
+    Node location assigned to clique 8
+    Node grade assigned to clique 7
+    Node comorbidities assigned to clique 1
+    Node age assigned to clique 5
+    Node adj_therapy assigned to clique 5
+    Node ASA assigned to clique 1
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for adj_therapy sum to different values:
+    min = 1
+    max = 2
+
+
+Beliefs for chance nodes:
+
+    recfree_02y:
+	false      0.396463
+	true       0.603537
+
+    surv_05y:
+	false      0.496118
+	true       0.503882
+
+    sex:
+	female     0.52444
+	male       0.47556
+
+    pT:
+	T1         0.0203666
+	T2         0.0885947
+	T3         0.715886
+	T4         0.175153
+
+    pN:
+	N1         0.721996
+	N2         0.278004
+
+    location:
+	proximal   0.600815
+	distal     0.386965
+	other/unknown 0.01222
+
+    grade:
+	g1         0.0488798
+	g2         0.635438
+	g3         0.248473
+	g4         0.00203666
+	unknown    0.0651731
+
+    comorbidities:
+	1          0.239308
+	2+         0.532587
+	none       0.198574
+	unknown    0.0295316
+
+    age:
+	70 - 74    0.305499
+	75 - 79    0.334012
+	80+        0.360489
+
+    adj_therapy:
+	No         0.645783
+	Yes        0.354217
+
+    ASA:
+	1          0.0539715
+	2          0.437882
+	3          0.271894
+	4          0.00509165
+	unknown    0.231161

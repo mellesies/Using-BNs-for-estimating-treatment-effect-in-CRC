@@ -1,0 +1,367 @@
+class colonca_2005_2012_adjuvant_none_simplified
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "10";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=DejaVu Sans,name=DejaVu Sans,style=plain,size=12]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node recfree_02y
+    {
+	label = "";
+	position = (424 451);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_LinkMode = "[adj_therapy:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][surv_05y:0][comorbidities:0]";
+	HR_Constraint_adj_therapy = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node surv_05y
+    {
+	label = "";
+	position = (633 505);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_LinkMode = "[recfree_02y:0][adj_therapy:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][comorbidities:0]";
+	HR_Constraint_recfree_02y = "NoArrow";
+	HR_Constraint_adj_therapy = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node sex
+    {
+	label = "";
+	position = (133 194);
+	states = ("female" "male");
+	HR_LinkMode = "[location:0][recfree_02y:0][pT:0][pN:0][grade:0][comorbidities:0][age:0][adj_therapy:0][ASA:0]";
+    }
+
+    node pT
+    {
+	label = "";
+	position = (142 418);
+	states = ("T1" "T2" "T3" "T4");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[location:0][grade:0][recfree_02y:0][pN:0][comorbidities:0][age:0][adj_therapy:0][ASA:0]";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+    }
+
+    node pN
+    {
+	label = "";
+	position = (332 336);
+	states = ("N1" "N2");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[grade:0][pT:0][recfree_02y:0][adj_therapy:0][location:0][comorbidities:0][age:0][ASA:0]";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+    }
+
+    node location
+    {
+	label = "";
+	position = (223 218);
+	states = ("proximal" "distal" "other/unknown");
+	HR_LinkMode = "[age:0][sex:0][grade:0][comorbidities:0][adj_therapy:0][ASA:0]";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node grade
+    {
+	label = "";
+	position = (251 280);
+	states = ("g1" "g2" "g3" "g4" "unknown");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[location:0][pN:0][comorbidities:0][age:0][adj_therapy:0][ASA:0]";
+	HR_Constraint_location = "NoArrow";
+    }
+
+    node comorbidities
+    {
+	label = "";
+	position = (596 175);
+	states = ("1" "2+" "none" "unknown");
+	HR_LinkMode = "[ASA:0][age:0][adj_therapy:0]";
+    }
+
+    node age
+    {
+	label = "";
+	position = (373 197);
+	states = ("70 - 74" "75 - 79" "80+");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[adj_therapy:0][ASA:0]";
+    }
+
+    node adj_therapy
+    {
+	label = "";
+	position = (463 340);
+	states = ("No" "Yes");
+	HR_LinkMode = "[location:0][pN:0][pT:0][ASA:0][comorbidities:0][age:0][sex:0][surv_05y:0]";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_comorbidities = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node ASA
+    {
+	label = "";
+	position = (508 244);
+	states = ("1" "2" "3" "4" "unknown");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[comorbidities:0][adj_therapy:0]";
+	HR_Constraint_comorbidities = "NoArrow";
+    }
+
+    potential (recfree_02y | pN pT)
+    {
+	data = ((( 1 1 )	%  pN=N1  pT=T1
+		 ( 1 1 )	%  pN=N1  pT=T2
+		 ( 1 1 )	%  pN=N1  pT=T3
+		 ( 1 1 ))	%  pN=N1  pT=T4
+		(( 1 1 )	%  pN=N2  pT=T1
+		 ( 1 1 )	%  pN=N2  pT=T2
+		 ( 1 1 )	%  pN=N2  pT=T3
+		 ( 1 1 )));	%  pN=N2  pT=T4
+	experience
+	     = (( 0	%  pN=N1  pT=T1
+		  0	%  pN=N1  pT=T2
+		  0	%  pN=N1  pT=T3
+		  0 )	%  pN=N1  pT=T4
+		( 0	%  pN=N2  pT=T1
+		  0	%  pN=N2  pT=T2
+		  0	%  pN=N2  pT=T3
+		  0 ));	%  pN=N2  pT=T4
+    }
+
+    potential (surv_05y | adj_therapy recfree_02y)
+    {
+	data = ((( 1 1 )	%  adj_therapy=No  recfree_02y=false
+		 ( 1 1 ))	%  adj_therapy=No  recfree_02y=true
+		(( 1 1 )	%  adj_therapy=Yes  recfree_02y=false
+		 ( 1 1 )));	%  adj_therapy=Yes  recfree_02y=true
+	experience
+	     = (( 0	%  adj_therapy=No  recfree_02y=false
+		  0 )	%  adj_therapy=No  recfree_02y=true
+		( 0	%  adj_therapy=Yes  recfree_02y=false
+		  0 ));	%  adj_therapy=Yes  recfree_02y=true
+    }
+
+    potential (sex)
+    {
+	data = ( 1 1 );
+	experience = 0;
+    }
+
+    potential (pT)
+    {
+	data = ( 1 1 1 1 );
+	experience = 0;
+    }
+
+    potential (pN | grade)
+    {
+	data = (( 1 1 )	%  grade=g1
+		( 1 1 )	%  grade=g2
+		( 1 1 )	%  grade=g3
+		( 1 1 )	%  grade=g4
+		( 1 1 ));	%  grade=unknown
+	experience
+	     = ( 0	%  grade=g1
+		 0	%  grade=g2
+		 0	%  grade=g3
+		 0	%  grade=g4
+		 0 );	%  grade=unknown
+    }
+
+    potential (location | sex)
+    {
+	data = (( 1 1 1 )	%  sex=female
+		( 1 1 1 ));	%  sex=male
+	experience
+	     = ( 0	%  sex=female
+		 0 );	%  sex=male
+    }
+
+    potential (grade | location)
+    {
+	data = (( 1 1 1 1 1 )	%  location=proximal
+		( 1 1 1 1 1 )	%  location=distal
+		( 1 1 1 1 1 ));	%  location=other/unknown
+	experience
+	     = ( 0	%  location=proximal
+		 0	%  location=distal
+		 0 );	%  location=other/unknown
+    }
+
+    potential (comorbidities)
+    {
+	data = ( 1 1 1 1 );
+	experience = 0;
+    }
+
+    potential (age)
+    {
+	data = ( 1 1 1 );
+	experience = 0;
+    }
+
+    potential (adj_therapy | ASA age pN)
+    {
+	data = (((( 1 1 )	%  ASA=1  age=70 - 74  pN=N1
+		  ( 1 1 ))	%  ASA=1  age=70 - 74  pN=N2
+		 (( 1 1 )	%  ASA=1  age=75 - 79  pN=N1
+		  ( 1 1 ))	%  ASA=1  age=75 - 79  pN=N2
+		 (( 1 1 )	%  ASA=1  age=80+  pN=N1
+		  ( 1 1 )))	%  ASA=1  age=80+  pN=N2
+		((( 1 1 )	%  ASA=2  age=70 - 74  pN=N1
+		  ( 1 1 ))	%  ASA=2  age=70 - 74  pN=N2
+		 (( 1 1 )	%  ASA=2  age=75 - 79  pN=N1
+		  ( 1 1 ))	%  ASA=2  age=75 - 79  pN=N2
+		 (( 1 1 )	%  ASA=2  age=80+  pN=N1
+		  ( 1 1 )))	%  ASA=2  age=80+  pN=N2
+		((( 1 1 )	%  ASA=3  age=70 - 74  pN=N1
+		  ( 1 1 ))	%  ASA=3  age=70 - 74  pN=N2
+		 (( 1 1 )	%  ASA=3  age=75 - 79  pN=N1
+		  ( 1 1 ))	%  ASA=3  age=75 - 79  pN=N2
+		 (( 1 1 )	%  ASA=3  age=80+  pN=N1
+		  ( 1 1 )))	%  ASA=3  age=80+  pN=N2
+		((( 1 1 )	%  ASA=4  age=70 - 74  pN=N1
+		  ( 1 1 ))	%  ASA=4  age=70 - 74  pN=N2
+		 (( 1 1 )	%  ASA=4  age=75 - 79  pN=N1
+		  ( 1 1 ))	%  ASA=4  age=75 - 79  pN=N2
+		 (( 1 1 )	%  ASA=4  age=80+  pN=N1
+		  ( 1 1 )))	%  ASA=4  age=80+  pN=N2
+		((( 1 1 )	%  ASA=unknown  age=70 - 74  pN=N1
+		  ( 1 1 ))	%  ASA=unknown  age=70 - 74  pN=N2
+		 (( 1 1 )	%  ASA=unknown  age=75 - 79  pN=N1
+		  ( 1 1 ))	%  ASA=unknown  age=75 - 79  pN=N2
+		 (( 1 1 )	%  ASA=unknown  age=80+  pN=N1
+		  ( 1 1 ))));	%  ASA=unknown  age=80+  pN=N2
+	experience
+	     = ((( 0	%  ASA=1  age=70 - 74  pN=N1
+		   0 )	%  ASA=1  age=70 - 74  pN=N2
+		 ( 0	%  ASA=1  age=75 - 79  pN=N1
+		   0 )	%  ASA=1  age=75 - 79  pN=N2
+		 ( 0	%  ASA=1  age=80+  pN=N1
+		   0 ))	%  ASA=1  age=80+  pN=N2
+		(( 0	%  ASA=2  age=70 - 74  pN=N1
+		   0 )	%  ASA=2  age=70 - 74  pN=N2
+		 ( 0	%  ASA=2  age=75 - 79  pN=N1
+		   0 )	%  ASA=2  age=75 - 79  pN=N2
+		 ( 0	%  ASA=2  age=80+  pN=N1
+		   0 ))	%  ASA=2  age=80+  pN=N2
+		(( 0	%  ASA=3  age=70 - 74  pN=N1
+		   0 )	%  ASA=3  age=70 - 74  pN=N2
+		 ( 0	%  ASA=3  age=75 - 79  pN=N1
+		   0 )	%  ASA=3  age=75 - 79  pN=N2
+		 ( 0	%  ASA=3  age=80+  pN=N1
+		   0 ))	%  ASA=3  age=80+  pN=N2
+		(( 0	%  ASA=4  age=70 - 74  pN=N1
+		   0 )	%  ASA=4  age=70 - 74  pN=N2
+		 ( 0	%  ASA=4  age=75 - 79  pN=N1
+		   0 )	%  ASA=4  age=75 - 79  pN=N2
+		 ( 0	%  ASA=4  age=80+  pN=N1
+		   0 ))	%  ASA=4  age=80+  pN=N2
+		(( 0	%  ASA=unknown  age=70 - 74  pN=N1
+		   0 )	%  ASA=unknown  age=70 - 74  pN=N2
+		 ( 0	%  ASA=unknown  age=75 - 79  pN=N1
+		   0 )	%  ASA=unknown  age=75 - 79  pN=N2
+		 ( 0	%  ASA=unknown  age=80+  pN=N1
+		   0 )));	%  ASA=unknown  age=80+  pN=N2
+    }
+
+    potential (ASA | comorbidities)
+    {
+	data = (( 1 1 1 1 1 )	%  comorbidities=1
+		( 1 1 1 1 1 )	%  comorbidities=2+
+		( 1 1 1 1 1 )	%  comorbidities=none
+		( 1 1 1 1 1 ));	%  comorbidities=unknown
+	experience
+	     = ( 0	%  comorbidities=1
+		 0	%  comorbidities=2+
+		 0	%  comorbidities=none
+		 0 );	%  comorbidities=unknown
+    }
+} % class colonca_2005_2012_adjuvant_none_simplified

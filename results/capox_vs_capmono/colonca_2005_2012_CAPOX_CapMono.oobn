@@ -1,0 +1,442 @@
+class colonca_2005_2012_CAPOX_CapMono
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "10";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=DejaVu Sans,name=DejaVu Sans,style=plain,size=12]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node recfree_01y
+    {
+	label = "";
+	position = (162 273);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_LinkMode = "[adj_therapy_type:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][recfree_02y:0][surv_01y:0][surv_05y:0][surv_04y:0][surv_03y:0][surv_02y:0][comorbidities:0]";
+	HR_Constraint_adj_therapy_type = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node recfree_02y
+    {
+	label = "";
+	position = (308 251);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_LinkMode = "[surv_04y:0][surv_03y:0][surv_02y:0][surv_01y:0][recfree_01y:0][adj_therapy_type:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][surv_05y:0][comorbidities:0]";
+	HR_Constraint_surv_04y = "NoLink";
+	HR_Constraint_surv_03y = "NoLink";
+	HR_Constraint_surv_02y = "NoLink";
+	HR_Constraint_surv_01y = "NoLink";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy_type = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node surv_01y
+    {
+	label = "";
+	position = (203 341);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_LinkMode = "[recfree_02y:0][recfree_01y:0][adj_therapy_type:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][surv_02y:0][comorbidities:0]";
+	HR_Constraint_recfree_02y = "NoLink";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy_type = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node surv_02y
+    {
+	label = "";
+	position = (327 345);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_LinkMode = "[surv_01y:0][recfree_02y:0][recfree_01y:0][adj_therapy_type:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][surv_03y:0][surv_04y:0][comorbidities:0]";
+	HR_Constraint_surv_01y = "NoArrow";
+	HR_Constraint_recfree_02y = "NoLink";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy_type = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node surv_03y
+    {
+	label = "";
+	position = (462 358);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_LinkMode = "[surv_02y:0][surv_01y:0][recfree_02y:0][recfree_01y:0][adj_therapy_type:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][surv_05y:0][surv_04y:0][comorbidities:0]";
+	HR_Constraint_surv_02y = "NoArrow";
+	HR_Constraint_surv_01y = "NoArrow";
+	HR_Constraint_recfree_02y = "NoLink";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy_type = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node surv_04y
+    {
+	label = "";
+	position = (570 326);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_LinkMode = "[surv_03y:0][surv_02y:0][surv_01y:0][recfree_02y:0][recfree_01y:0][adj_therapy_type:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][surv_05y:0][comorbidities:0]";
+	HR_Constraint_surv_03y = "NoArrow";
+	HR_Constraint_surv_02y = "NoArrow";
+	HR_Constraint_surv_01y = "NoArrow";
+	HR_Constraint_recfree_02y = "NoLink";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy_type = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node surv_05y
+    {
+	label = "";
+	position = (648 262);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_LinkMode = "[surv_04y:0][surv_03y:0][surv_02y:0][surv_01y:0][recfree_02y:0][recfree_01y:0][adj_therapy_type:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][comorbidities:0]";
+	HR_Constraint_surv_04y = "NoArrow";
+	HR_Constraint_surv_03y = "NoArrow";
+	HR_Constraint_surv_02y = "NoArrow";
+	HR_Constraint_surv_01y = "NoArrow";
+	HR_Constraint_recfree_02y = "NoArrow";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy_type = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node sex
+    {
+	label = "";
+	position = (64 111);
+	states = ("female" "male");
+	HR_LinkMode = "[location:0][recfree_02y:0][recfree_01y:0][pT:0][pN:0][grade:0][comorbidities:0][age:0][adj_therapy_type:0][ASA:0]";
+    }
+
+    node pT
+    {
+	label = "";
+	position = (590 84);
+	states = ("T2" "T3" "T4" "T1");
+	HR_LinkMode = "[location:0][grade:0][pN:0][comorbidities:0][age:0][adj_therapy_type:0][ASA:0]";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+    }
+
+    node pN
+    {
+	label = "";
+	position = (489 115);
+	states = ("N1" "N2");
+	HR_LinkMode = "[grade:0][pT:0][location:0][comorbidities:0][age:0][adj_therapy_type:0][ASA:0]";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+    }
+
+    node location
+    {
+	label = "";
+	position = (149 190);
+	states = ("proximal" "distal" "other/unknown");
+	HR_LinkMode = "[age:0][sex:0][grade:0][comorbidities:0][adj_therapy_type:0][ASA:0]";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node grade
+    {
+	label = "";
+	position = (390 37);
+	states = ("g2" "unknown" "g3" "g1" "g4");
+	HR_LinkMode = "[location:0][surv_03y:0][pN:0][comorbidities:0][age:0][adj_therapy_type:0][ASA:0]";
+	HR_Constraint_location = "NoArrow";
+    }
+
+    node comorbidities
+    {
+	label = "";
+	position = (237 88);
+	states = ("2+" "1" "unknown" "none");
+	HR_LinkMode = "[ASA:0][age:0][adj_therapy_type:0]";
+    }
+
+    node age
+    {
+	label = "";
+	position = (120 53);
+	states = ("75 - 79" "80+" "70 - 74");
+	HR_LinkMode = "[adj_therapy_type:0][ASA:0]";
+    }
+
+    node adj_therapy_type
+    {
+	label = "";
+	position = (280 193);
+	states = ("CapMono" "CAPOX");
+	HR_LinkMode = "[location:0][pN:0][pT:0][ASA:0][comorbidities:0][age:0][sex:0]";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_comorbidities = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+    }
+
+    node ASA
+    {
+	label = "";
+	position = (351 129);
+	states = ("unknown" "2" "3" "1" "4");
+	HR_LinkMode = "[comorbidities:0]";
+	HR_Constraint_comorbidities = "NoArrow";
+    }
+
+    potential (recfree_01y)
+    {
+	data = ( 1 1 );
+	experience = 0;
+    }
+
+    potential (recfree_02y | recfree_01y)
+    {
+	data = (( 1 1 )	%  recfree_01y=false
+		( 1 1 ));	%  recfree_01y=true
+	experience
+	     = ( 0	%  recfree_01y=false
+		 0 );	%  recfree_01y=true
+    }
+
+    potential (surv_01y | recfree_01y)
+    {
+	data = (( 1 1 )	%  recfree_01y=false
+		( 1 1 ));	%  recfree_01y=true
+	experience
+	     = ( 0	%  recfree_01y=false
+		 0 );	%  recfree_01y=true
+    }
+
+    potential (surv_02y | recfree_01y surv_01y)
+    {
+	data = ((( 1 1 )	%  recfree_01y=false  surv_01y=false
+		 ( 1 1 ))	%  recfree_01y=false  surv_01y=true
+		(( 1 1 )	%  recfree_01y=true  surv_01y=false
+		 ( 1 1 )));	%  recfree_01y=true  surv_01y=true
+	experience
+	     = (( 0	%  recfree_01y=false  surv_01y=false
+		  0 )	%  recfree_01y=false  surv_01y=true
+		( 0	%  recfree_01y=true  surv_01y=false
+		  0 ));	%  recfree_01y=true  surv_01y=true
+    }
+
+    potential (surv_03y | grade surv_02y)
+    {
+	data = ((( 1 1 )	%  grade=g2  surv_02y=false
+		 ( 1 1 ))	%  grade=g2  surv_02y=true
+		(( 1 1 )	%  grade=unknown  surv_02y=false
+		 ( 1 1 ))	%  grade=unknown  surv_02y=true
+		(( 1 1 )	%  grade=g3  surv_02y=false
+		 ( 1 1 ))	%  grade=g3  surv_02y=true
+		(( 1 1 )	%  grade=g1  surv_02y=false
+		 ( 1 1 ))	%  grade=g1  surv_02y=true
+		(( 1 1 )	%  grade=g4  surv_02y=false
+		 ( 1 1 )));	%  grade=g4  surv_02y=true
+	experience
+	     = (( 0	%  grade=g2  surv_02y=false
+		  0 )	%  grade=g2  surv_02y=true
+		( 0	%  grade=unknown  surv_02y=false
+		  0 )	%  grade=unknown  surv_02y=true
+		( 0	%  grade=g3  surv_02y=false
+		  0 )	%  grade=g3  surv_02y=true
+		( 0	%  grade=g1  surv_02y=false
+		  0 )	%  grade=g1  surv_02y=true
+		( 0	%  grade=g4  surv_02y=false
+		  0 ));	%  grade=g4  surv_02y=true
+    }
+
+    potential (surv_04y | surv_03y recfree_01y)
+    {
+	data = ((( 1 1 )	%  surv_03y=false  recfree_01y=false
+		 ( 1 1 ))	%  surv_03y=false  recfree_01y=true
+		(( 1 1 )	%  surv_03y=true  recfree_01y=false
+		 ( 1 1 )));	%  surv_03y=true  recfree_01y=true
+	experience
+	     = (( 0	%  surv_03y=false  recfree_01y=false
+		  0 )	%  surv_03y=false  recfree_01y=true
+		( 0	%  surv_03y=true  recfree_01y=false
+		  0 ));	%  surv_03y=true  recfree_01y=true
+    }
+
+    potential (surv_05y | surv_04y recfree_02y)
+    {
+	data = ((( 1 1 )	%  surv_04y=false  recfree_02y=false
+		 ( 1 1 ))	%  surv_04y=false  recfree_02y=true
+		(( 1 1 )	%  surv_04y=true  recfree_02y=false
+		 ( 1 1 )));	%  surv_04y=true  recfree_02y=true
+	experience
+	     = (( 0	%  surv_04y=false  recfree_02y=false
+		  0 )	%  surv_04y=false  recfree_02y=true
+		( 0	%  surv_04y=true  recfree_02y=false
+		  0 ));	%  surv_04y=true  recfree_02y=true
+    }
+
+    potential (sex)
+    {
+	data = ( 1 1 );
+	experience = 0;
+    }
+
+    potential (pT)
+    {
+	data = ( 1 1 1 1 );
+	experience = 0;
+    }
+
+    potential (pN | grade)
+    {
+	data = (( 1 1 )	%  grade=g2
+		( 1 1 )	%  grade=unknown
+		( 1 1 )	%  grade=g3
+		( 1 1 )	%  grade=g1
+		( 1 1 ));	%  grade=g4
+	experience
+	     = ( 0	%  grade=g2
+		 0	%  grade=unknown
+		 0	%  grade=g3
+		 0	%  grade=g1
+		 0 );	%  grade=g4
+    }
+
+    potential (location | sex)
+    {
+	data = (( 1 1 1 )	%  sex=female
+		( 1 1 1 ));	%  sex=male
+	experience
+	     = ( 0	%  sex=female
+		 0 );	%  sex=male
+    }
+
+    potential (grade)
+    {
+	data = ( 1 1 1 1 1 );
+	experience = 0;
+    }
+
+    potential (comorbidities)
+    {
+	data = ( 1 1 1 1 );
+	experience = 0;
+    }
+
+    potential (age)
+    {
+	data = ( 1 1 1 );
+	experience = 0;
+    }
+
+    potential (adj_therapy_type | age)
+    {
+	data = (( 1 1 )	%  age=75 - 79
+		( 1 1 )	%  age=80+
+		( 1 1 ));	%  age=70 - 74
+	experience
+	     = ( 0	%  age=75 - 79
+		 0	%  age=80+
+		 0 );	%  age=70 - 74
+    }
+
+    potential (ASA | comorbidities)
+    {
+	data = (( 1 1 1 1 1 )	%  comorbidities=2+
+		( 1 1 1 1 1 )	%  comorbidities=1
+		( 1 1 1 1 1 )	%  comorbidities=unknown
+		( 1 1 1 1 1 ));	%  comorbidities=none
+	experience
+	     = ( 0	%  comorbidities=2+
+		 0	%  comorbidities=1
+		 0	%  comorbidities=unknown
+		 0 );	%  comorbidities=none
+    }
+} % class colonca_2005_2012_CAPOX_CapMono

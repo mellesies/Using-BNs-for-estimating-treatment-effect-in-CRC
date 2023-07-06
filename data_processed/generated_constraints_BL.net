@@ -1,0 +1,346 @@
+
+net
+{
+    node_size = (80 40);
+    HR_Has_Constraints = "yes";
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "10";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=DejaVu Sans,name=DejaVu Sans,style=plain,size=12]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+}
+
+
+node sex
+{
+    position = (83 237);
+    states = ("male" "female");
+    
+    HR_LinkMode = "";
+}
+
+
+node age
+{
+    position = (138 295);
+    states = ("70 - 74" "75 - 79" "80+");
+    
+    HR_LinkMode = "";
+}
+
+
+node comorbidities
+{
+    position = (256 260);
+    states = ("none" "1" "2+" "unknown");
+    
+    HR_LinkMode = "";
+}
+
+
+node ASA
+{
+    position = (370 219);
+    states = ("1" "2" "3" "4" "unknown");
+    HR_Constraint_comorbidities = "NoArrow";
+    HR_LinkMode = "[comorbidities:0]";
+}
+
+
+node pT
+{
+    position = (518 328);
+    states = ("T1" "T2" "T3" "T4");
+    HR_Constraint_grade = "NoArrow";
+    HR_Constraint_location = "NoArrow";
+    HR_LinkMode = "[grade:0][location:0]";
+}
+
+
+node pN
+{
+    position = (534 261);
+    states = ("N1" "N2");
+    HR_Constraint_pT = "NoArrow";
+    HR_Constraint_grade = "NoArrow";
+    HR_LinkMode = "[pT:0][grade:0]";
+}
+
+
+node grade
+{
+    position = (370 300);
+    states = ("g1" "g2" "g3" "g4" "unknown");
+    HR_Constraint_location = "NoArrow";
+    HR_LinkMode = "[location:0]";
+}
+
+
+node location
+{
+    position = (168 158);
+    states = ("proximal" "distal" "other/unknown");
+    HR_Constraint_sex = "NoArrow";
+    HR_Constraint_age = "NoArrow";
+    HR_LinkMode = "[sex:0][age:0]";
+}
+
+
+node adj_therapy
+{
+    position = (280 150);
+    states = ("No" "Yes");
+    HR_Constraint_sex = "NoArrow";
+    HR_Constraint_age = "NoArrow";
+    HR_Constraint_comorbidities = "NoArrow";
+    HR_Constraint_ASA = "NoArrow";
+    HR_Constraint_pT = "NoArrow";
+    HR_Constraint_pN = "NoArrow";
+    HR_Constraint_location = "NoArrow";
+    HR_LinkMode = "[sex:0][age:0][comorbidities:0][ASA:0][pT:0][pN:0][location:0]";
+}
+
+
+node adj_therapy_type
+{
+    position = (380 150);
+    states = ("None" "CapMono" "CAPOX");
+    HR_Constraint_sex = "NoArrow";
+    HR_Constraint_age = "NoArrow";
+    HR_Constraint_comorbidities = "NoArrow";
+    HR_Constraint_ASA = "NoArrow";
+    HR_Constraint_pT = "NoArrow";
+    HR_Constraint_pN = "NoArrow";
+    HR_Constraint_location = "NoArrow";
+    HR_LinkMode = "[sex:0][age:0][comorbidities:0][ASA:0][pT:0][pN:0][location:0]";
+}
+
+
+node recfree_01y
+{
+    position = (180 75);
+    states = ("True" "False");
+    HR_Constraint_sex = "NoArrow";
+    HR_Constraint_age = "NoArrow";
+    HR_Constraint_ASA = "NoArrow";
+    HR_Constraint_pT = "NoArrow";
+    HR_Constraint_pN = "NoArrow";
+    HR_Constraint_grade = "NoArrow";
+    HR_Constraint_location = "NoArrow";
+    HR_Constraint_adj_therapy = "NoArrow";
+    HR_Constraint_adj_therapy_type = "NoArrow";
+    HR_LinkMode = "[sex:0][age:0][ASA:0][pT:0][pN:0][grade:0][location:0][adj_therapy:0][adj_therapy_type:0]";
+}
+
+
+node recfree_02y
+{
+    position = (280 75);
+    states = ("True" "False");
+    HR_Constraint_sex = "NoArrow";
+    HR_Constraint_age = "NoArrow";
+    HR_Constraint_ASA = "NoArrow";
+    HR_Constraint_pT = "NoArrow";
+    HR_Constraint_pN = "NoArrow";
+    HR_Constraint_grade = "NoArrow";
+    HR_Constraint_location = "NoArrow";
+    HR_Constraint_adj_therapy = "NoArrow";
+    HR_Constraint_adj_therapy_type = "NoArrow";
+    HR_Constraint_recfree_01y = "NoArrow";
+    HR_Constraint_surv_01y = "NoLink";
+    HR_Constraint_surv_02y = "NoLink";
+    HR_Constraint_surv_03y = "NoLink";
+    HR_Constraint_surv_04y = "NoLink";
+    HR_LinkMode = "[sex:0][age:0][ASA:0][pT:0][pN:0][grade:0][location:0][adj_therapy:0][adj_therapy_type:0][recfree_01y:0][surv_01y:0][surv_02y:0][surv_03y:0][surv_04y:0]";
+}
+
+
+node surv_01y
+{
+    position = (280 10);
+    states = ("True" "False");
+    HR_Constraint_sex = "NoArrow";
+    HR_Constraint_age = "NoArrow";
+    HR_Constraint_ASA = "NoArrow";
+    HR_Constraint_pT = "NoArrow";
+    HR_Constraint_pN = "NoArrow";
+    HR_Constraint_grade = "NoArrow";
+    HR_Constraint_location = "NoArrow";
+    HR_Constraint_adj_therapy = "NoArrow";
+    HR_Constraint_adj_therapy_type = "NoArrow";
+    HR_Constraint_recfree_01y = "NoArrow";
+    HR_Constraint_recfree_02y = "NoLink";
+    HR_LinkMode = "[sex:0][age:0][ASA:0][pT:0][pN:0][grade:0][location:0][adj_therapy:0][adj_therapy_type:0][recfree_01y:0][recfree_02y:0]";
+}
+
+
+node surv_02y
+{
+    position = (380 10);
+    states = ("True" "False");
+    HR_Constraint_sex = "NoArrow";
+    HR_Constraint_age = "NoArrow";
+    HR_Constraint_ASA = "NoArrow";
+    HR_Constraint_pT = "NoArrow";
+    HR_Constraint_pN = "NoArrow";
+    HR_Constraint_grade = "NoArrow";
+    HR_Constraint_location = "NoArrow";
+    HR_Constraint_adj_therapy = "NoArrow";
+    HR_Constraint_adj_therapy_type = "NoArrow";
+    HR_Constraint_recfree_01y = "NoArrow";
+    HR_Constraint_recfree_02y = "NoLink";
+    HR_Constraint_surv_01y = "NoArrow";
+    HR_LinkMode = "[sex:0][age:0][ASA:0][pT:0][pN:0][grade:0][location:0][adj_therapy:0][adj_therapy_type:0][recfree_01y:0][recfree_02y:0][surv_01y:0]";
+}
+
+
+node surv_03y
+{
+    position = (480 10);
+    states = ("True" "False");
+    HR_Constraint_sex = "NoArrow";
+    HR_Constraint_age = "NoArrow";
+    HR_Constraint_ASA = "NoArrow";
+    HR_Constraint_pT = "NoArrow";
+    HR_Constraint_pN = "NoArrow";
+    HR_Constraint_grade = "NoArrow";
+    HR_Constraint_location = "NoArrow";
+    HR_Constraint_adj_therapy = "NoArrow";
+    HR_Constraint_adj_therapy_type = "NoArrow";
+    HR_Constraint_recfree_01y = "NoArrow";
+    HR_Constraint_recfree_02y = "NoLink";
+    HR_Constraint_surv_01y = "NoArrow";
+    HR_Constraint_surv_02y = "NoArrow";
+    HR_LinkMode = "[sex:0][age:0][ASA:0][pT:0][pN:0][grade:0][location:0][adj_therapy:0][adj_therapy_type:0][recfree_01y:0][recfree_02y:0][surv_01y:0][surv_02y:0]";
+}
+
+
+node surv_04y
+{
+    position = (580 10);
+    states = ("True" "False");
+    HR_Constraint_sex = "NoArrow";
+    HR_Constraint_age = "NoArrow";
+    HR_Constraint_ASA = "NoArrow";
+    HR_Constraint_pT = "NoArrow";
+    HR_Constraint_pN = "NoArrow";
+    HR_Constraint_grade = "NoArrow";
+    HR_Constraint_location = "NoArrow";
+    HR_Constraint_adj_therapy = "NoArrow";
+    HR_Constraint_adj_therapy_type = "NoArrow";
+    HR_Constraint_recfree_01y = "NoArrow";
+    HR_Constraint_recfree_02y = "NoLink";
+    HR_Constraint_surv_01y = "NoArrow";
+    HR_Constraint_surv_02y = "NoArrow";
+    HR_Constraint_surv_03y = "NoArrow";
+    HR_LinkMode = "[sex:0][age:0][ASA:0][pT:0][pN:0][grade:0][location:0][adj_therapy:0][adj_therapy_type:0][recfree_01y:0][recfree_02y:0][surv_01y:0][surv_02y:0][surv_03y:0]";
+}
+
+
+node surv_05y
+{
+    position = (680 10);
+    states = ("True" "False");
+    HR_Constraint_sex = "NoArrow";
+    HR_Constraint_age = "NoArrow";
+    HR_Constraint_ASA = "NoArrow";
+    HR_Constraint_pT = "NoArrow";
+    HR_Constraint_pN = "NoArrow";
+    HR_Constraint_grade = "NoArrow";
+    HR_Constraint_location = "NoArrow";
+    HR_Constraint_adj_therapy = "NoArrow";
+    HR_Constraint_adj_therapy_type = "NoArrow";
+    HR_Constraint_recfree_01y = "NoArrow";
+    HR_Constraint_recfree_02y = "NoArrow";
+    HR_Constraint_surv_01y = "NoArrow";
+    HR_Constraint_surv_02y = "NoArrow";
+    HR_Constraint_surv_03y = "NoArrow";
+    HR_Constraint_surv_04y = "NoArrow";
+    HR_LinkMode = "[sex:0][age:0][ASA:0][pT:0][pN:0][grade:0][location:0][adj_therapy:0][adj_therapy_type:0][recfree_01y:0][recfree_02y:0][surv_01y:0][surv_02y:0][surv_03y:0][surv_04y:0]";
+}
+
+
+potential (sex) {}
+
+
+potential (age) {}
+
+
+potential (comorbidities) {}
+
+
+potential (ASA) {}
+
+
+potential (pT) {}
+
+
+potential (pN) {}
+
+
+potential (grade) {}
+
+
+potential (location) {}
+
+
+potential (adj_therapy) {}
+
+
+potential (adj_therapy_type) {}
+
+
+potential (recfree_01y) {}
+
+
+potential (recfree_02y) {}
+
+
+potential (surv_01y) {}
+
+
+potential (surv_02y) {}
+
+
+potential (surv_03y) {}
+
+
+potential (surv_04y) {}
+
+
+potential (surv_05y) {}
+

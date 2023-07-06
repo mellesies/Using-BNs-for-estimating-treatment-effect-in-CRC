@@ -1,0 +1,636 @@
+class colonca_2005_2012_adjuvant_none_added_edges
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "10";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=DejaVu Sans,name=DejaVu Sans,style=plain,size=12]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node recfree_01y
+    {
+	label = "";
+	position = (304 405);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_Constraint_adj_therapy = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+	HR_LinkMode = "[adj_therapy:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][recfree_02y:0][surv_01y:0][surv_02y:0][surv_03y:0][comorbidities:0]";
+    }
+
+    node recfree_02y
+    {
+	label = "";
+	position = (404 405);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_Constraint_surv_04y = "NoLink";
+	HR_Constraint_surv_03y = "NoLink";
+	HR_Constraint_surv_02y = "NoLink";
+	HR_Constraint_surv_01y = "NoLink";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+	HR_LinkMode = "[surv_04y:0][surv_03y:0][surv_02y:0][surv_01y:0][recfree_01y:0][adj_therapy:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][surv_05y:0][comorbidities:0]";
+    }
+
+    node surv_01y
+    {
+	label = "";
+	position = (404 470);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_Constraint_recfree_02y = "NoLink";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+	HR_LinkMode = "[recfree_02y:0][recfree_01y:0][adj_therapy:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][surv_02y:0][comorbidities:0]";
+    }
+
+    node surv_02y
+    {
+	label = "";
+	position = (504 470);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_Constraint_surv_01y = "NoArrow";
+	HR_Constraint_recfree_02y = "NoLink";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+	HR_LinkMode = "[surv_01y:0][recfree_02y:0][recfree_01y:0][adj_therapy:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][surv_03y:0][comorbidities:0]";
+    }
+
+    node surv_03y
+    {
+	label = "";
+	position = (604 470);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_Constraint_surv_02y = "NoArrow";
+	HR_Constraint_surv_01y = "NoArrow";
+	HR_Constraint_recfree_02y = "NoLink";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+	HR_LinkMode = "[surv_02y:0][surv_01y:0][recfree_02y:0][recfree_01y:0][adj_therapy:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][surv_04y:0][comorbidities:0]";
+    }
+
+    node surv_04y
+    {
+	label = "";
+	position = (704 470);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_Constraint_surv_03y = "NoArrow";
+	HR_Constraint_surv_02y = "NoArrow";
+	HR_Constraint_surv_01y = "NoArrow";
+	HR_Constraint_recfree_02y = "NoLink";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+	HR_LinkMode = "[surv_03y:0][surv_02y:0][surv_01y:0][recfree_02y:0][recfree_01y:0][adj_therapy:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][surv_05y:0][comorbidities:0]";
+    }
+
+    node surv_05y
+    {
+	label = "";
+	position = (805 470);
+	states = ("false" "true");
+	subtype = boolean;
+	HR_Constraint_surv_04y = "NoArrow";
+	HR_Constraint_surv_03y = "NoArrow";
+	HR_Constraint_surv_02y = "NoArrow";
+	HR_Constraint_surv_01y = "NoArrow";
+	HR_Constraint_recfree_02y = "NoArrow";
+	HR_Constraint_recfree_01y = "NoArrow";
+	HR_Constraint_adj_therapy = "NoArrow";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+	HR_LinkMode = "[surv_04y:0][surv_03y:0][surv_02y:0][surv_01y:0][recfree_02y:0][recfree_01y:0][adj_therapy:0][location:0][grade:0][pN:0][pT:0][ASA:0][age:0][sex:0][comorbidities:0]";
+    }
+
+    node sex
+    {
+	label = "";
+	position = (224 143);
+	states = ("male" "female");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[location:0][recfree_02y:0][recfree_01y:0][pT:0][pN:0][grade:0][comorbidities:0][age:0][adj_therapy:0][ASA:0]";
+    }
+
+    node pT
+    {
+	label = "";
+	position = (235 220);
+	states = ("T1" "T2" "T3" "T4");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_grade = "NoArrow";
+	HR_LinkMode = "[location:0][grade:0][recfree_02y:0][pN:0][comorbidities:0][age:0][adj_therapy:0][ASA:0]";
+    }
+
+    node pN
+    {
+	label = "";
+	position = (328 250);
+	states = ("N1" "N2");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Constraint_grade = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_LinkMode = "[grade:0][pT:0][recfree_02y:0][adj_therapy:0][recfree_01y:0][surv_01y:0][surv_02y:0][location:0][comorbidities:0][age:0][ASA:0]";
+    }
+
+    node location
+    {
+	label = "";
+	position = (330 162);
+	states = ("proximal" "distal" "other/unknown");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+	HR_LinkMode = "[age:0][sex:0][grade:0][comorbidities:0][adj_therapy:0][ASA:0]";
+    }
+
+    node grade
+    {
+	label = "";
+	position = (435 181);
+	states = ("g1" "g2" "g3" "g4" "unknown");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Constraint_location = "NoArrow";
+	HR_LinkMode = "[location:0][pN:0][comorbidities:0][age:0][adj_therapy:0][ASA:0]";
+    }
+
+    node comorbidities
+    {
+	label = "";
+	position = (660 138);
+	states = ("none" "1" "2+" "unknown");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[ASA:0][age:0][adj_therapy:0]";
+    }
+
+    node age
+    {
+	label = "";
+	position = (528 148);
+	states = ("70 - 74" "75 - 79" "80+");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_LinkMode = "[adj_therapy:0][ASA:0]";
+    }
+
+    node adj_therapy
+    {
+	label = "";
+	position = (558 329);
+	states = ("No" "Yes");
+	HR_Constraint_location = "NoArrow";
+	HR_Constraint_pN = "NoArrow";
+	HR_Constraint_pT = "NoArrow";
+	HR_Constraint_ASA = "NoArrow";
+	HR_Constraint_comorbidities = "NoArrow";
+	HR_Constraint_age = "NoArrow";
+	HR_Constraint_sex = "NoArrow";
+	HR_LinkMode = "[location:0][pN:0][pT:0][ASA:0][comorbidities:0][age:0][sex:0][surv_05y:0][recfree_02y:0][surv_03y:0]";
+    }
+
+    node ASA
+    {
+	label = "";
+	position = (648 229);
+	states = ("1" "2" "3" "4" "unknown");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_4 = "";
+	HR_State_3 = "";
+	HR_State_2 = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+	HR_Constraint_surv_04y = "Arrow";
+	HR_Constraint_comorbidities = "NoArrow";
+	HR_LinkMode = "[comorbidities:0][adj_therapy:0][surv_04y:0]";
+    }
+
+    potential (recfree_01y | pN)
+    {
+	data = (( 0.185427 0.814573 )	%  pN=N1
+		( 0.382038 0.617962 ));	%  pN=N2
+	experience
+	     = ( 709	%  pN=N1
+		 273 );	%  pN=N2
+    }
+
+    potential (recfree_02y | adj_therapy pN pT recfree_01y)
+    {
+	data = ((((( 1 0 )	%  adj_therapy=No  pN=N1  pT=T1  recfree_01y=false
+		   ( 0.00471144 0.995289 ))	%  adj_therapy=No  pN=N1  pT=T1  recfree_01y=true
+		  (( 0.994308 0.0056918 )	%  adj_therapy=No  pN=N1  pT=T2  recfree_01y=false
+		   ( 0.0491427 0.950857 ))	%  adj_therapy=No  pN=N1  pT=T2  recfree_01y=true
+		  (( 0.999998 2.20899E-06 )	%  adj_therapy=No  pN=N1  pT=T3  recfree_01y=false
+		   ( 0.211636 0.788364 ))	%  adj_therapy=No  pN=N1  pT=T3  recfree_01y=true
+		  (( 1 1.43837E-07 )	%  adj_therapy=No  pN=N1  pT=T4  recfree_01y=false
+		   ( 0.417767 0.582233 )))	%  adj_therapy=No  pN=N1  pT=T4  recfree_01y=true
+		 ((( 1 1 )	%  adj_therapy=No  pN=N2  pT=T1  recfree_01y=false
+		   ( 1 1 ))	%  adj_therapy=No  pN=N2  pT=T1  recfree_01y=true
+		  (( 0.999908 9.23843E-05 )	%  adj_therapy=No  pN=N2  pT=T2  recfree_01y=false
+		   ( 0.486582 0.513418 ))	%  adj_therapy=No  pN=N2  pT=T2  recfree_01y=true
+		  (( 1 6.27182E-08 )	%  adj_therapy=No  pN=N2  pT=T3  recfree_01y=false
+		   ( 0.415631 0.584369 ))	%  adj_therapy=No  pN=N2  pT=T3  recfree_01y=true
+		  (( 1 6.29424E-12 )	%  adj_therapy=No  pN=N2  pT=T4  recfree_01y=false
+		   ( 0.574142 0.425858 ))))	%  adj_therapy=No  pN=N2  pT=T4  recfree_01y=true
+		(((( 0.999975 2.47684E-05 )	%  adj_therapy=Yes  pN=N1  pT=T1  recfree_01y=false
+		   ( 0.364488 0.635512 ))	%  adj_therapy=Yes  pN=N1  pT=T1  recfree_01y=true
+		  (( 0.996757 0.00324268 )	%  adj_therapy=Yes  pN=N1  pT=T2  recfree_01y=false
+		   ( 0.0563927 0.943607 ))	%  adj_therapy=Yes  pN=N1  pT=T2  recfree_01y=true
+		  (( 1 8.7829E-08 )	%  adj_therapy=Yes  pN=N1  pT=T3  recfree_01y=false
+		   ( 0.130315 0.869685 ))	%  adj_therapy=Yes  pN=N1  pT=T3  recfree_01y=true
+		  (( 1 3.91247E-12 )	%  adj_therapy=Yes  pN=N1  pT=T4  recfree_01y=false
+		   ( 0.245126 0.754874 )))	%  adj_therapy=Yes  pN=N1  pT=T4  recfree_01y=true
+		 ((( 1 1 )	%  adj_therapy=Yes  pN=N2  pT=T1  recfree_01y=false
+		   ( 0 1 ))	%  adj_therapy=Yes  pN=N2  pT=T1  recfree_01y=true
+		  (( 0.999684 0.000315742 )	%  adj_therapy=Yes  pN=N2  pT=T2  recfree_01y=false
+		   ( 0.323633 0.676367 ))	%  adj_therapy=Yes  pN=N2  pT=T2  recfree_01y=true
+		  (( 1 1.63189E-08 )	%  adj_therapy=Yes  pN=N2  pT=T3  recfree_01y=false
+		   ( 0.183905 0.816095 ))	%  adj_therapy=Yes  pN=N2  pT=T3  recfree_01y=true
+		  (( 1 5.03541E-11 )	%  adj_therapy=Yes  pN=N2  pT=T4  recfree_01y=false
+		   ( 0.274289 0.725711 )))));	%  adj_therapy=Yes  pN=N2  pT=T4  recfree_01y=true
+	experience
+	     = (((( 1	%  adj_therapy=No  pN=N1  pT=T1  recfree_01y=false
+		    9 )	%  adj_therapy=No  pN=N1  pT=T1  recfree_01y=true
+		  ( 7.88441	%  adj_therapy=No  pN=N1  pT=T2  recfree_01y=false
+		    36.1156 )	%  adj_therapy=No  pN=N1  pT=T2  recfree_01y=true
+		  ( 68.3919	%  adj_therapy=No  pN=N1  pT=T3  recfree_01y=false
+		    272.608 )	%  adj_therapy=No  pN=N1  pT=T3  recfree_01y=true
+		  ( 25.2118	%  adj_therapy=No  pN=N1  pT=T4  recfree_01y=false
+		    57.7882 ))	%  adj_therapy=No  pN=N1  pT=T4  recfree_01y=true
+		 (( 0	%  adj_therapy=No  pN=N2  pT=T1  recfree_01y=false
+		    0 )	%  adj_therapy=No  pN=N2  pT=T1  recfree_01y=true
+		  ( 3.04167	%  adj_therapy=No  pN=N2  pT=T2  recfree_01y=false
+		    3.95833 )	%  adj_therapy=No  pN=N2  pT=T2  recfree_01y=true
+		  ( 56.3773	%  adj_therapy=No  pN=N2  pT=T3  recfree_01y=false
+		    54.6227 )	%  adj_therapy=No  pN=N2  pT=T3  recfree_01y=true
+		  ( 18	%  adj_therapy=No  pN=N2  pT=T4  recfree_01y=false
+		    16 )))	%  adj_therapy=No  pN=N2  pT=T4  recfree_01y=true
+		((( 0.117087	%  adj_therapy=Yes  pN=N1  pT=T1  recfree_01y=false
+		    8.88291 )	%  adj_therapy=Yes  pN=N1  pT=T1  recfree_01y=true
+		  ( 2.03723	%  adj_therapy=Yes  pN=N1  pT=T2  recfree_01y=false
+		    24.9628 )	%  adj_therapy=Yes  pN=N1  pT=T2  recfree_01y=true
+		  ( 19.7865	%  adj_therapy=Yes  pN=N1  pT=T3  recfree_01y=false
+		    143.214 )	%  adj_therapy=Yes  pN=N1  pT=T3  recfree_01y=true
+		  ( 7.03865	%  adj_therapy=Yes  pN=N1  pT=T4  recfree_01y=false
+		    24.9613 ))	%  adj_therapy=Yes  pN=N1  pT=T4  recfree_01y=true
+		 (( 0	%  adj_therapy=Yes  pN=N2  pT=T1  recfree_01y=false
+		    1 )	%  adj_therapy=Yes  pN=N2  pT=T1  recfree_01y=true
+		  ( 2.05232	%  adj_therapy=Yes  pN=N2  pT=T2  recfree_01y=false
+		    6.94768 )	%  adj_therapy=Yes  pN=N2  pT=T2  recfree_01y=true
+		  ( 15.8251	%  adj_therapy=Yes  pN=N2  pT=T3  recfree_01y=false
+		    72.1749 )	%  adj_therapy=Yes  pN=N2  pT=T3  recfree_01y=true
+		  ( 9	%  adj_therapy=Yes  pN=N2  pT=T4  recfree_01y=false
+		    14 ))));	%  adj_therapy=Yes  pN=N2  pT=T4  recfree_01y=true
+    }
+
+    potential (surv_01y | pN recfree_01y)
+    {
+	data = ((( 0.406695 0.593305 )	%  pN=N1  recfree_01y=false
+		 ( 2.53497E-05 0.999975 ))	%  pN=N1  recfree_01y=true
+		(( 0.594459 0.405541 )	%  pN=N2  recfree_01y=false
+		 ( 2.78748E-07 1 )));	%  pN=N2  recfree_01y=true
+	experience
+	     = (( 131.468	%  pN=N1  recfree_01y=false
+		  577.532 )	%  pN=N1  recfree_01y=true
+		( 104.296	%  pN=N2  recfree_01y=false
+		  168.704 ));	%  pN=N2  recfree_01y=true
+    }
+
+    potential (surv_02y | pN surv_01y recfree_01y)
+    {
+	data = (((( 1 2.64281E-19 )	%  pN=N1  surv_01y=false  recfree_01y=false
+		  ( 1 2.49452E-19 ))	%  pN=N1  surv_01y=false  recfree_01y=true
+		 (( 0.453827 0.546173 )	%  pN=N1  surv_01y=true  recfree_01y=false
+		  ( 0.078027 0.921973 )))	%  pN=N1  surv_01y=true  recfree_01y=true
+		((( 1 0 )	%  pN=N2  surv_01y=false  recfree_01y=false
+		  ( 1 0 ))	%  pN=N2  surv_01y=false  recfree_01y=true
+		 (( 0.628008 0.371992 )	%  pN=N2  surv_01y=true  recfree_01y=false
+		  ( 0.144855 0.855145 ))));	%  pN=N2  surv_01y=true  recfree_01y=true
+	experience
+	     = ((( 53.4673	%  pN=N1  surv_01y=false  recfree_01y=false
+		   0.0146402 )	%  pN=N1  surv_01y=false  recfree_01y=true
+		 ( 78.0004	%  pN=N1  surv_01y=true  recfree_01y=false
+		   577.518 ))	%  pN=N1  surv_01y=true  recfree_01y=true
+		(( 62	%  pN=N2  surv_01y=false  recfree_01y=false
+		   4.70258E-05 )	%  pN=N2  surv_01y=false  recfree_01y=true
+		 ( 42.2964	%  pN=N2  surv_01y=true  recfree_01y=false
+		   168.704 )));	%  pN=N2  surv_01y=true  recfree_01y=true
+    }
+
+    potential (surv_03y | adj_therapy surv_02y recfree_01y)
+    {
+	data = (((( 1 6.21048E-22 )	%  adj_therapy=No  surv_02y=false  recfree_01y=false
+		  ( 1 3.18932E-25 ))	%  adj_therapy=No  surv_02y=false  recfree_01y=true
+		 (( 0.501473 0.498527 )	%  adj_therapy=No  surv_02y=true  recfree_01y=false
+		  ( 0.136929 0.863071 )))	%  adj_therapy=No  surv_02y=true  recfree_01y=true
+		((( 1 0 )	%  adj_therapy=Yes  surv_02y=false  recfree_01y=false
+		  ( 1 2.75514E-23 ))	%  adj_therapy=Yes  surv_02y=false  recfree_01y=true
+		 (( 0.476215 0.523785 )	%  adj_therapy=Yes  surv_02y=true  recfree_01y=false
+		  ( 0.0431344 0.956866 ))));	%  adj_therapy=Yes  surv_02y=true  recfree_01y=true
+	experience
+	     = ((( 138.469	%  adj_therapy=No  surv_02y=false  recfree_01y=false
+		   54.3956 )	%  adj_therapy=No  surv_02y=false  recfree_01y=true
+		 ( 41.4382	%  adj_therapy=No  surv_02y=true  recfree_01y=false
+		   395.697 ))	%  adj_therapy=No  surv_02y=true  recfree_01y=true
+		(( 38.9595	%  adj_therapy=Yes  surv_02y=false  recfree_01y=false
+		   15.1186 )	%  adj_therapy=Yes  surv_02y=false  recfree_01y=true
+		 ( 16.8974	%  adj_therapy=Yes  surv_02y=true  recfree_01y=false
+		   281.025 )));	%  adj_therapy=Yes  surv_02y=true  recfree_01y=true
+    }
+
+    potential (surv_04y | ASA surv_03y)
+    {
+	data = ((( 1 9.32718E-13 )	%  ASA=1  surv_03y=false
+		 ( 0.0232558 0.976744 ))	%  ASA=1  surv_03y=true
+		(( 1 1.23789E-22 )	%  ASA=2  surv_03y=false
+		 ( 0.111111 0.888889 ))	%  ASA=2  surv_03y=true
+		(( 1 8.9939E-23 )	%  ASA=3  surv_03y=false
+		 ( 0.121622 0.878378 ))	%  ASA=3  surv_03y=true
+		(( 1 0 )	%  ASA=4  surv_03y=false
+		 ( 1 0 ))	%  ASA=4  surv_03y=true
+		(( 1 6.01685E-20 )	%  ASA=unknown  surv_03y=false
+		 ( 0.140625 0.859375 )));	%  ASA=unknown  surv_03y=true
+	experience
+	     = (( 9.50255	%  ASA=1  surv_03y=false
+		  43.4975 )	%  ASA=1  surv_03y=true
+		( 121.367	%  ASA=2  surv_03y=false
+		  308.633 )	%  ASA=2  surv_03y=true
+		( 111.365	%  ASA=3  surv_03y=false
+		  155.635 )	%  ASA=3  surv_03y=true
+		( 3	%  ASA=4  surv_03y=false
+		  2 )	%  ASA=4  surv_03y=true
+		( 96.8386	%  ASA=unknown  surv_03y=false
+		  130.161 ));	%  ASA=unknown  surv_03y=true
+    }
+
+    potential (surv_05y | adj_therapy surv_04y recfree_02y)
+    {
+	data = (((( 1 1.0428E-18 )	%  adj_therapy=No  surv_04y=false  recfree_02y=false
+		  ( 1 1.21299E-16 ))	%  adj_therapy=No  surv_04y=false  recfree_02y=true
+		 (( 0.213672 0.786328 )	%  adj_therapy=No  surv_04y=true  recfree_02y=false
+		  ( 0.123065 0.876935 )))	%  adj_therapy=No  surv_04y=true  recfree_02y=true
+		((( 1 2.97308E-21 )	%  adj_therapy=Yes  surv_04y=false  recfree_02y=false
+		  ( 1 2.15527E-14 ))	%  adj_therapy=Yes  surv_04y=false  recfree_02y=true
+		 (( 0.129752 0.870248 )	%  adj_therapy=Yes  surv_04y=true  recfree_02y=false
+		  ( 0.0181846 0.981815 ))));	%  adj_therapy=Yes  surv_04y=true  recfree_02y=true
+	experience
+	     = ((( 244.569	%  adj_therapy=No  surv_04y=false  recfree_02y=false
+		   73.1449 )	%  adj_therapy=No  surv_04y=false  recfree_02y=true
+		 ( 52.7605	%  adj_therapy=No  surv_04y=true  recfree_02y=false
+		   259.525 ))	%  adj_therapy=No  surv_04y=true  recfree_02y=true
+		(( 77.9249	%  adj_therapy=Yes  surv_04y=false  recfree_02y=false
+		   20.9711 )	%  adj_therapy=Yes  surv_04y=false  recfree_02y=true
+		 ( 26.7136	%  adj_therapy=Yes  surv_04y=true  recfree_02y=false
+		   226.39 )));	%  adj_therapy=Yes  surv_04y=true  recfree_02y=true
+    }
+
+    potential (sex)
+    {
+	data = ( 0.47556 0.52444 );
+	experience = 982;
+    }
+
+    potential (pT)
+    {
+	data = ( 0.0203666 0.0885947 0.715886 0.175153 );
+	experience = 982;
+    }
+
+    potential (pN | grade)
+    {
+	data = (( 0.875 0.125 )	%  grade=g1
+		( 0.775641 0.224359 )	%  grade=g2
+		( 0.553279 0.446721 )	%  grade=g3
+		( 1 0 )	%  grade=g4
+		( 0.71875 0.28125 ));	%  grade=unknown
+	experience
+	     = ( 48	%  grade=g1
+		 624	%  grade=g2
+		 244	%  grade=g3
+		 2	%  grade=g4
+		 64 );	%  grade=unknown
+    }
+
+    potential (location | sex)
+    {
+	data = (( 0.496788 0.496788 0.00642398 )	%  sex=male
+		( 0.695146 0.287379 0.0174757 ));	%  sex=female
+	experience
+	     = ( 467	%  sex=male
+		 515 );	%  sex=female
+    }
+
+    potential (grade | location)
+    {
+	data = (( 0.0542373 0.567797 0.30678 0.00338983 0.0677966 )	%  location=proximal
+		( 0.0421053 0.736842 0.157895 0 0.0631579 )	%  location=distal
+		( 0 0.75 0.25 0 0 ));	%  location=other/unknown
+	experience
+	     = ( 590	%  location=proximal
+		 380	%  location=distal
+		 12 );	%  location=other/unknown
+    }
+
+    potential (comorbidities)
+    {
+	data = ( 0.198574 0.239308 0.532587 0.0295316 );
+	experience = 982;
+    }
+
+    potential (age)
+    {
+	data = ( 0.305499 0.334012 0.360489 );
+	experience = 982;
+    }
+
+    potential (adj_therapy | ASA age pN)
+    {
+	data = (((( 0.0952381 0.904762 )	%  ASA=1  age=70 - 74  pN=N1
+		  ( 0 1 ))	%  ASA=1  age=70 - 74  pN=N2
+		 (( 0.5 0.5 )	%  ASA=1  age=75 - 79  pN=N1
+		  ( 0 1 ))	%  ASA=1  age=75 - 79  pN=N2
+		 (( 0.714286 0.285714 )	%  ASA=1  age=80+  pN=N1
+		  ( 1 0 )))	%  ASA=1  age=80+  pN=N2
+		((( 0.313131 0.686869 )	%  ASA=2  age=70 - 74  pN=N1
+		  ( 0.212121 0.787879 ))	%  ASA=2  age=70 - 74  pN=N2
+		 (( 0.610169 0.389831 )	%  ASA=2  age=75 - 79  pN=N1
+		  ( 0.325581 0.674419 ))	%  ASA=2  age=75 - 79  pN=N2
+		 (( 0.881188 0.118812 )	%  ASA=2  age=80+  pN=N1
+		  ( 0.777778 0.222222 )))	%  ASA=2  age=80+  pN=N2
+		((( 0.608696 0.391304 )	%  ASA=3  age=70 - 74  pN=N1
+		  ( 0.533333 0.466667 ))	%  ASA=3  age=70 - 74  pN=N2
+		 (( 0.779661 0.220339 )	%  ASA=3  age=75 - 79  pN=N1
+		  ( 0.636364 0.363636 ))	%  ASA=3  age=75 - 79  pN=N2
+		 (( 0.988889 0.0111111 )	%  ASA=3  age=80+  pN=N1
+		  ( 1 0 )))	%  ASA=3  age=80+  pN=N2
+		((( 0 1 )	%  ASA=4  age=70 - 74  pN=N1
+		  ( 1 1 ))	%  ASA=4  age=70 - 74  pN=N2
+		 (( 1 0 )	%  ASA=4  age=75 - 79  pN=N1
+		  ( 1 1 ))	%  ASA=4  age=75 - 79  pN=N2
+		 (( 1 0 )	%  ASA=4  age=80+  pN=N1
+		  ( 1 0 )))	%  ASA=4  age=80+  pN=N2
+		((( 0.48 0.52 )	%  ASA=unknown  age=70 - 74  pN=N1
+		  ( 0.275862 0.724138 ))	%  ASA=unknown  age=70 - 74  pN=N2
+		 (( 0.693878 0.306122 )	%  ASA=unknown  age=75 - 79  pN=N1
+		  ( 0.444444 0.555556 ))	%  ASA=unknown  age=75 - 79  pN=N2
+		 (( 0.941176 0.0588235 )	%  ASA=unknown  age=80+  pN=N1
+		  ( 0.9 0.1 ))));	%  ASA=unknown  age=80+  pN=N2
+	experience
+	     = ((( 21	%  ASA=1  age=70 - 74  pN=N1
+		   6 )	%  ASA=1  age=70 - 74  pN=N2
+		 ( 14	%  ASA=1  age=75 - 79  pN=N1
+		   3 )	%  ASA=1  age=75 - 79  pN=N2
+		 ( 7	%  ASA=1  age=80+  pN=N1
+		   2 ))	%  ASA=1  age=80+  pN=N2
+		(( 99	%  ASA=2  age=70 - 74  pN=N1
+		   33 )	%  ASA=2  age=70 - 74  pN=N2
+		 ( 118	%  ASA=2  age=75 - 79  pN=N1
+		   43 )	%  ASA=2  age=75 - 79  pN=N2
+		 ( 101	%  ASA=2  age=80+  pN=N1
+		   36 ))	%  ASA=2  age=80+  pN=N2
+		(( 46	%  ASA=3  age=70 - 74  pN=N1
+		   15 )	%  ASA=3  age=70 - 74  pN=N2
+		 ( 59	%  ASA=3  age=75 - 79  pN=N1
+		   22 )	%  ASA=3  age=75 - 79  pN=N2
+		 ( 90	%  ASA=3  age=80+  pN=N1
+		   35 ))	%  ASA=3  age=80+  pN=N2
+		(( 1	%  ASA=4  age=70 - 74  pN=N1
+		   0 )	%  ASA=4  age=70 - 74  pN=N2
+		 ( 2	%  ASA=4  age=75 - 79  pN=N1
+		   0 )	%  ASA=4  age=75 - 79  pN=N2
+		 ( 1	%  ASA=4  age=80+  pN=N1
+		   1 ))	%  ASA=4  age=80+  pN=N2
+		(( 50	%  ASA=unknown  age=70 - 74  pN=N1
+		   29 )	%  ASA=unknown  age=70 - 74  pN=N2
+		 ( 49	%  ASA=unknown  age=75 - 79  pN=N1
+		   18 )	%  ASA=unknown  age=75 - 79  pN=N2
+		 ( 51	%  ASA=unknown  age=80+  pN=N1
+		   30 )));	%  ASA=unknown  age=80+  pN=N2
+    }
+
+    potential (ASA | comorbidities)
+    {
+	data = (( 0.138462 0.512821 0.0769231 0.00512821 0.266667 )	%  comorbidities=none
+		( 0.0723404 0.514894 0.157447 0 0.255319 )	%  comorbidities=1
+		( 0.0152964 0.380497 0.397706 0.00764818 0.198853 )	%  comorbidities=2+
+		( 0.0344828 0.344828 0.241379 0 0.37931 ));	%  comorbidities=unknown
+	experience
+	     = ( 195	%  comorbidities=none
+		 235	%  comorbidities=1
+		 523	%  comorbidities=2+
+		 29 );	%  comorbidities=unknown
+    }
+} % class colonca_2005_2012_adjuvant_none_added_edges

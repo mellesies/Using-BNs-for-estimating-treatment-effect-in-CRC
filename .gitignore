@@ -1,0 +1,5 @@
+*.pdf
+*.xlsx
+*.csv
+*.pickle
+config.yaml
