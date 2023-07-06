@@ -2,4 +2,6 @@
 *.xlsx
 *.csv
 *.pickle
+*.log
+*.RData
 config.yaml
